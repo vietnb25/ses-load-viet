@@ -1,0 +1,15 @@
+.title {
+  font-weight: bold;
+  font-size: 24px;
+}
+.content {
+  margin-left: 30px;
+  font-size: 20px;
+}
+.empty-input {
+  border: 1px solid red; /* Đổi màu đỏ khi input trống */
+  border-radius: 5px;
+}
+input:invalid[focused="true"] {
+  border: 10px solid green;
+}
