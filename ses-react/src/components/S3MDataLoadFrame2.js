@@ -1575,11 +1575,11 @@ export default function S3MDataLoadFrame2(props) {
 
   const [minVCNH31, setMinVCNH31] = useState(0);
   const [maxVCNH31, setMaxVCNH31] = useState(100);
-  const [url, setUrl] = useState("");
+  const [url, setUrl] = useState("tcp://localhost:1883");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [client, setClient] = useState("");
-  const [topic, setToppics] = useState("");
+  const [client, setClient] = useState("client-sub");
+  const [topic, setToppics] = useState("loadTopic");
   const [typeSystem, setTypeSystem] = useState("");
   const [typeDevice, setTypeDevice] = useState("");
   const [idDevice, setIdDevice] = useState("");
