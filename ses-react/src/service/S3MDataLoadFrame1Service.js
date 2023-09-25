@@ -13,7 +13,7 @@ export const sendmessage = (data, user, device) => {
     a3: device.a3,
     a4: device.a4,
     a5: device.a5,
-    func: device.codeFunction,
+    func: device.func,
     messageType: device.messageType,
     crc: device.crc,
   });

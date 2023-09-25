@@ -166,7 +166,7 @@ export default function S3MDataLoadFrame1(props) {
             a3: a3,
             a4: a4,
             a5: a5,
-            func: codeFunction,
+            func: func,
             messageType: messageType,
             crc: crc,
           }
@@ -189,7 +189,7 @@ export default function S3MDataLoadFrame1(props) {
       { value: password, message: "Vui lòng nhập Password" },
       { value: topic, message: "Vui lòng nhập Topic" },
       { value: client, message: "Vui lòng nhập Client-ID" },
-      { value: codeFunction, message: "Vui lòng nhập Code Function" },
+      { value: func, message: "Vui lòng nhập Code Function" },
       { value: messageType, message: "Vui lòng nhập Message Type" },
       { value: data, message: "Vui lòng nhập Data" },
       { value: typeSystem, message: "Vui lòng nhập Type System" },
@@ -531,17 +531,17 @@ export default function S3MDataLoadFrame1(props) {
   };
   const [startTime, setStartTime] = useState();
   const [endTime, setEndTime] = useState();
-//Input
-  const [url, setUrl] = useState("");
+  //Input
+  const [url, setUrl] = useState("tcp://localhost:1883");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [client, setClient] = useState("");
-  const [topic, setToppics] = useState("");
+  const [client, setClient] = useState("client-sub");
+  const [topic, setToppics] = useState("loadTopic");
   const [typeSystem, setTypeSystem] = useState("");
   const [typeDevice, setTypeDevice] = useState("");
   const [idDevice, setIdDevice] = useState("");
   const [time, setTime] = useState("");
-  const [codeFunction, setCodeFunction] = useState("");
+  const [func, setFunc] = useState("");
   const [messageType, setMessageType] = useState("");
   const [data, setData] = useState("");
   const [country, setCountry] = useState("");
@@ -607,7 +607,7 @@ export default function S3MDataLoadFrame1(props) {
     setClient("");
     setTypeDevice("");
     setTypeSystem("");
-    setCodeFunction("");
+    setFunc("");
 
     setMessageType("");
     setData("");
@@ -667,8 +667,8 @@ export default function S3MDataLoadFrame1(props) {
                     setTypeSystem={setTypeSystem}
                     typeDevice={typeDevice}
                     setTypeDevice={setTypeDevice}
-                    codeFunction={codeFunction}
-                    setCodeFunction={setCodeFunction}
+                    func={func}
+                    setFunc={setFunc}
                     messageType={messageType}
                     setMessageType={setMessageType}
                     data={data}
@@ -743,10 +743,10 @@ export default function S3MDataLoadFrame1(props) {
 
                   <h4 style={{ fontSize: "20px" }} className="mt-3">
                     Code function:{" "}
-                    {codeFunction === "" ? (
+                    {func === "" ? (
                       <i style={{ color: "red" }}>không có dữ liệu đâu nè</i>
                     ) : (
-                      codeFunction
+                      func
                     )}
                   </h4>
 

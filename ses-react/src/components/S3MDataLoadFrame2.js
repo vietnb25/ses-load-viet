@@ -354,7 +354,7 @@ export default function S3MDataLoadFrame2(props) {
             a3: a3,
             a4: a4,
             a5: a5,
-            func: codeFunction,
+            codeFunction: func,
             messageType: messageType,
             crc: crc,
           }
@@ -450,7 +450,7 @@ export default function S3MDataLoadFrame2(props) {
       { value: password, message: "Vui lòng nhập Password" },
       { value: topic, message: "Vui lòng nhập Topic" },
       { value: client, message: "Vui lòng nhập Client-ID" },
-      { value: codeFunction, message: "Vui lòng nhập Code Function" },
+      { value: func, message: "Vui lòng nhập Code Function" },
       { value: messageType, message: "Vui lòng nhập Message Type" },
       { value: data, message: "Vui lòng nhập Data" },
       { value: typeSystem, message: "Vui lòng nhập Type System" },
@@ -725,7 +725,7 @@ export default function S3MDataLoadFrame2(props) {
     setClient("");
     setTypeDevice("");
     setTypeSystem("");
-    setCodeFunction("");
+    setFunc("");
     setIdDevice("");
     setMessageType("");
     setData("");
@@ -1584,7 +1584,7 @@ export default function S3MDataLoadFrame2(props) {
   const [typeDevice, setTypeDevice] = useState("");
   const [idDevice, setIdDevice] = useState("");
   const [time, setTime] = useState("");
-  const [codeFunction, setCodeFunction] = useState("");
+  const [func, setFunc] = useState("");
   const [crc, setCrc] = useState("");
   const [messageType, setMessageType] = useState("");
   const [data, setData] = useState("");
@@ -1642,8 +1642,8 @@ export default function S3MDataLoadFrame2(props) {
                     setTypeSystem={setTypeSystem}
                     typeDevice={typeDevice}
                     setTypeDevice={setTypeDevice}
-                    codeFunction={codeFunction}
-                    setCodeFunction={setCodeFunction}
+                    func={func}
+                    setFunc={setFunc}
                     messageType={messageType}
                     setMessageType={setMessageType}
                     data={data}
@@ -1719,10 +1719,10 @@ export default function S3MDataLoadFrame2(props) {
 
                   <h4 style={{ fontSize: "20px" }} className="mt-3">
                     Code function:{" "}
-                    {codeFunction === "" ? (
+                    {func === "" ? (
                       <i style={{ color: "red" }}>không có dữ liệu đâu nè</i>
                     ) : (
-                      codeFunction
+                      func
                     )}
                   </h4>
 

@@ -121,10 +121,10 @@ const FormReceive = (props) => {
             style={{ width: "90%" }}
             placeholder="Code Function"
             addonAfter={<FacebookOutlined />}
-            value={props.codeFunction}
+            value={props.func}
             onChange={(event) => {
               const newValue = event.target.value;
-              props.setCodeFunction(newValue);
+              props.setFunc(newValue);
               setCodeEmpty(newValue.trim() === "");
             }}
             className={`mt-2 ${codeEmpty ? "empty-input" : ""}`}
